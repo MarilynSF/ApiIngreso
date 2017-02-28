@@ -1,0 +1,1450 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "beego Test API",
+        "description": "beego has a very cool tools to autogenerate documents for your API",
+        "version": "1.0.0",
+        "termsOfService": "http://beego.me/",
+        "contact": {
+            "email": "astaxie@gmail.com"
+        },
+        "license": {
+            "name": "Url http://www.apache.org/licenses/LICENSE-2.0.html"
+        }
+    },
+    "basePath": "/v1",
+    "paths": {
+        "/concepto/": {
+            "get": {
+                "tags": [
+                    "concepto"
+                ],
+                "description": "get Concepto",
+                "operationId": "ConceptoController.Get All",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "query",
+                        "description": "Filter. e.g. col1:v1,col2:v2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "fields",
+                        "description": "Fields returned. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "sortby",
+                        "description": "Sorted-by fields. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "order",
+                        "description": "Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "limit",
+                        "description": "Limit the size of result set. Must be an integer",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "offset",
+                        "description": "Start position of result set. Must be an integer",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "schema": {
+                            "$ref": "#/definitions/Concepto"
+                        }
+                    },
+                    "403": {}
+                }
+            },
+            "post": {
+                "tags": [
+                    "concepto"
+                ],
+                "description": "create Concepto",
+                "operationId": "ConceptoController.Post",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for Concepto content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Concepto"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "{int} models.Concepto"
+                    },
+                    "403": {
+                        "description": "body is empty"
+                    }
+                }
+            }
+        },
+        "/concepto/{id}": {
+            "get": {
+                "tags": [
+                    "concepto"
+                ],
+                "description": "get Concepto by id",
+                "operationId": "ConceptoController.Get One",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The key for staticblock",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "schema": {
+                            "$ref": "#/definitions/Concepto"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is empty"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "concepto"
+                ],
+                "description": "update the Concepto",
+                "operationId": "ConceptoController.Put",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to update",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for Concepto content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Concepto"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "schema": {
+                            "$ref": "#/definitions/Concepto"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is not int"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "concepto"
+                ],
+                "description": "delete the Concepto",
+                "operationId": "ConceptoController.Delete",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to delete",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} delete success!"
+                    },
+                    "403": {
+                        "description": "id is empty"
+                    }
+                }
+            }
+        },
+        "/cuenta_bancaria/": {
+            "get": {
+                "tags": [
+                    "cuenta_bancaria"
+                ],
+                "description": "get CuentaBancaria",
+                "operationId": "CuentaBancariaController.Get All",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "query",
+                        "description": "Filter. e.g. col1:v1,col2:v2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "fields",
+                        "description": "Fields returned. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "sortby",
+                        "description": "Sorted-by fields. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "order",
+                        "description": "Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "limit",
+                        "description": "Limit the size of result set. Must be an integer",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "offset",
+                        "description": "Start position of result set. Must be an integer",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "schema": {
+                            "$ref": "#/definitions/CuentaBancaria"
+                        }
+                    },
+                    "403": {}
+                }
+            },
+            "post": {
+                "tags": [
+                    "cuenta_bancaria"
+                ],
+                "description": "create CuentaBancaria",
+                "operationId": "CuentaBancariaController.Post",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for CuentaBancaria content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/CuentaBancaria"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "{int} models.CuentaBancaria"
+                    },
+                    "403": {
+                        "description": "body is empty"
+                    }
+                }
+            }
+        },
+        "/cuenta_bancaria/{id}": {
+            "get": {
+                "tags": [
+                    "cuenta_bancaria"
+                ],
+                "description": "get CuentaBancaria by id",
+                "operationId": "CuentaBancariaController.Get One",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The key for staticblock",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "schema": {
+                            "$ref": "#/definitions/CuentaBancaria"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is empty"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "cuenta_bancaria"
+                ],
+                "description": "update the CuentaBancaria",
+                "operationId": "CuentaBancariaController.Put",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to update",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for CuentaBancaria content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/CuentaBancaria"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "schema": {
+                            "$ref": "#/definitions/CuentaBancaria"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is not int"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "cuenta_bancaria"
+                ],
+                "description": "delete the CuentaBancaria",
+                "operationId": "CuentaBancariaController.Delete",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to delete",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} delete success!"
+                    },
+                    "403": {
+                        "description": "id is empty"
+                    }
+                }
+            }
+        },
+        "/forma_ingreso/": {
+            "get": {
+                "tags": [
+                    "forma_ingreso"
+                ],
+                "description": "get FormaIngreso",
+                "operationId": "FormaIngresoController.Get All",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "query",
+                        "description": "Filter. e.g. col1:v1,col2:v2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "fields",
+                        "description": "Fields returned. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "sortby",
+                        "description": "Sorted-by fields. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "order",
+                        "description": "Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "limit",
+                        "description": "Limit the size of result set. Must be an integer",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "offset",
+                        "description": "Start position of result set. Must be an integer",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "schema": {
+                            "$ref": "#/definitions/FormaIngreso"
+                        }
+                    },
+                    "403": {}
+                }
+            },
+            "post": {
+                "tags": [
+                    "forma_ingreso"
+                ],
+                "description": "create FormaIngreso",
+                "operationId": "FormaIngresoController.Post",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for FormaIngreso content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/FormaIngreso"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "{int} models.FormaIngreso"
+                    },
+                    "403": {
+                        "description": "body is empty"
+                    }
+                }
+            }
+        },
+        "/forma_ingreso/{id}": {
+            "get": {
+                "tags": [
+                    "forma_ingreso"
+                ],
+                "description": "get FormaIngreso by id",
+                "operationId": "FormaIngresoController.Get One",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The key for staticblock",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "schema": {
+                            "$ref": "#/definitions/FormaIngreso"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is empty"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "forma_ingreso"
+                ],
+                "description": "update the FormaIngreso",
+                "operationId": "FormaIngresoController.Put",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to update",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for FormaIngreso content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/FormaIngreso"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "schema": {
+                            "$ref": "#/definitions/FormaIngreso"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is not int"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "forma_ingreso"
+                ],
+                "description": "delete the FormaIngreso",
+                "operationId": "FormaIngresoController.Delete",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to delete",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} delete success!"
+                    },
+                    "403": {
+                        "description": "id is empty"
+                    }
+                }
+            }
+        },
+        "/informacion_persona_natural/": {
+            "get": {
+                "tags": [
+                    "informacion_persona_natural"
+                ],
+                "description": "get InformacionPersonaNatural",
+                "operationId": "InformacionPersonaNaturalController.Get All",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "query",
+                        "description": "Filter. e.g. col1:v1,col2:v2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "fields",
+                        "description": "Fields returned. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "sortby",
+                        "description": "Sorted-by fields. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "order",
+                        "description": "Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "limit",
+                        "description": "Limit the size of result set. Must be an integer",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "offset",
+                        "description": "Start position of result set. Must be an integer",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "schema": {
+                            "$ref": "#/definitions/InformacionPersonaNatural"
+                        }
+                    },
+                    "403": {}
+                }
+            },
+            "post": {
+                "tags": [
+                    "informacion_persona_natural"
+                ],
+                "description": "create InformacionPersonaNatural",
+                "operationId": "InformacionPersonaNaturalController.Post",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for InformacionPersonaNatural content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/InformacionPersonaNatural"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "{int} models.InformacionPersonaNatural"
+                    },
+                    "403": {
+                        "description": "body is empty"
+                    }
+                }
+            }
+        },
+        "/informacion_persona_natural/{id}": {
+            "get": {
+                "tags": [
+                    "informacion_persona_natural"
+                ],
+                "description": "get InformacionPersonaNatural by id",
+                "operationId": "InformacionPersonaNaturalController.Get One",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The key for staticblock",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "schema": {
+                            "$ref": "#/definitions/InformacionPersonaNatural"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is empty"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "informacion_persona_natural"
+                ],
+                "description": "update the InformacionPersonaNatural",
+                "operationId": "InformacionPersonaNaturalController.Put",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to update",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for InformacionPersonaNatural content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/InformacionPersonaNatural"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "schema": {
+                            "$ref": "#/definitions/InformacionPersonaNatural"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is not int"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "informacion_persona_natural"
+                ],
+                "description": "delete the InformacionPersonaNatural",
+                "operationId": "InformacionPersonaNaturalController.Delete",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to delete",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} delete success!"
+                    },
+                    "403": {
+                        "description": "id is empty"
+                    }
+                }
+            }
+        },
+        "/ingreso/": {
+            "get": {
+                "tags": [
+                    "ingreso"
+                ],
+                "description": "get Ingreso",
+                "operationId": "IngresoController.Get All",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "query",
+                        "description": "Filter. e.g. col1:v1,col2:v2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "fields",
+                        "description": "Fields returned. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "sortby",
+                        "description": "Sorted-by fields. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "order",
+                        "description": "Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "limit",
+                        "description": "Limit the size of result set. Must be an integer",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "offset",
+                        "description": "Start position of result set. Must be an integer",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "schema": {
+                            "$ref": "#/definitions/Ingreso"
+                        }
+                    },
+                    "403": {}
+                }
+            },
+            "post": {
+                "tags": [
+                    "ingreso"
+                ],
+                "description": "create Ingreso",
+                "operationId": "IngresoController.Post",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for Ingreso content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Ingreso"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "{int} models.Ingreso"
+                    },
+                    "403": {
+                        "description": "body is empty"
+                    }
+                }
+            }
+        },
+        "/ingreso/{id}": {
+            "get": {
+                "tags": [
+                    "ingreso"
+                ],
+                "description": "get Ingreso by id",
+                "operationId": "IngresoController.Get One",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The key for staticblock",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "schema": {
+                            "$ref": "#/definitions/Ingreso"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is empty"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "ingreso"
+                ],
+                "description": "update the Ingreso",
+                "operationId": "IngresoController.Put",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to update",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for Ingreso content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Ingreso"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "schema": {
+                            "$ref": "#/definitions/Ingreso"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is not int"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "ingreso"
+                ],
+                "description": "delete the Ingreso",
+                "operationId": "IngresoController.Delete",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to delete",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} delete success!"
+                    },
+                    "403": {
+                        "description": "id is empty"
+                    }
+                }
+            }
+        },
+        "/ingreso_rubro/": {
+            "get": {
+                "tags": [
+                    "ingreso_rubro"
+                ],
+                "description": "get IngresoRubro",
+                "operationId": "IngresoRubroController.Get All",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "query",
+                        "description": "Filter. e.g. col1:v1,col2:v2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "fields",
+                        "description": "Fields returned. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "sortby",
+                        "description": "Sorted-by fields. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "order",
+                        "description": "Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "limit",
+                        "description": "Limit the size of result set. Must be an integer",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "offset",
+                        "description": "Start position of result set. Must be an integer",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "schema": {
+                            "$ref": "#/definitions/IngresoRubro"
+                        }
+                    },
+                    "403": {}
+                }
+            },
+            "post": {
+                "tags": [
+                    "ingreso_rubro"
+                ],
+                "description": "create IngresoRubro",
+                "operationId": "IngresoRubroController.Post",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for IngresoRubro content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/IngresoRubro"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "{int} models.IngresoRubro"
+                    },
+                    "403": {
+                        "description": "body is empty"
+                    }
+                }
+            }
+        },
+        "/ingreso_rubro/{id}": {
+            "get": {
+                "tags": [
+                    "ingreso_rubro"
+                ],
+                "description": "get IngresoRubro by id",
+                "operationId": "IngresoRubroController.Get One",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The key for staticblock",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "schema": {
+                            "$ref": "#/definitions/IngresoRubro"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is empty"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "ingreso_rubro"
+                ],
+                "description": "update the IngresoRubro",
+                "operationId": "IngresoRubroController.Put",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to update",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for IngresoRubro content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/IngresoRubro"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "schema": {
+                            "$ref": "#/definitions/IngresoRubro"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is not int"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "ingreso_rubro"
+                ],
+                "description": "delete the IngresoRubro",
+                "operationId": "IngresoRubroController.Delete",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to delete",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} delete success!"
+                    },
+                    "403": {
+                        "description": "id is empty"
+                    }
+                }
+            }
+        },
+        "/rubro/": {
+            "get": {
+                "tags": [
+                    "rubro"
+                ],
+                "description": "get Rubro",
+                "operationId": "RubroController.Get All",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "query",
+                        "description": "Filter. e.g. col1:v1,col2:v2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "fields",
+                        "description": "Fields returned. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "sortby",
+                        "description": "Sorted-by fields. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "order",
+                        "description": "Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "limit",
+                        "description": "Limit the size of result set. Must be an integer",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "offset",
+                        "description": "Start position of result set. Must be an integer",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "schema": {
+                            "$ref": "#/definitions/Rubro"
+                        }
+                    },
+                    "403": {}
+                }
+            },
+            "post": {
+                "tags": [
+                    "rubro"
+                ],
+                "description": "create Rubro",
+                "operationId": "RubroController.Post",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for Rubro content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Rubro"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "{int} models.Rubro"
+                    },
+                    "403": {
+                        "description": "body is empty"
+                    }
+                }
+            }
+        },
+        "/rubro/{id}": {
+            "get": {
+                "tags": [
+                    "rubro"
+                ],
+                "description": "get Rubro by id",
+                "operationId": "RubroController.Get One",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The key for staticblock",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "schema": {
+                            "$ref": "#/definitions/Rubro"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is empty"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "rubro"
+                ],
+                "description": "update the Rubro",
+                "operationId": "RubroController.Put",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to update",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for Rubro content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Rubro"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "schema": {
+                            "$ref": "#/definitions/Rubro"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is not int"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "rubro"
+                ],
+                "description": "delete the Rubro",
+                "operationId": "RubroController.Delete",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to delete",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} delete success!"
+                    },
+                    "403": {
+                        "description": "id is empty"
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "Concepto": {
+            "title": "Concepto",
+            "type": "object",
+            "properties": {
+                "Cabeza": {
+                    "type": "boolean"
+                },
+                "Codigo": {
+                    "type": "string"
+                },
+                "Descripcion": {
+                    "type": "string"
+                },
+                "FechaCreacion": {
+                    "$ref": "#/definitions/\u0026{time Time}"
+                },
+                "FechaExpiracion": {
+                    "$ref": "#/definitions/\u0026{time Time}"
+                },
+                "Id": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "Nombre": {
+                    "type": "string"
+                },
+                "Rubro": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "TipoConcepto": {
+                    "type": "integer",
+                    "format": "int64"
+                }
+            }
+        },
+        "CuentaBancaria": {
+            "title": "CuentaBancaria",
+            "type": "object",
+            "properties": {
+                "EstadoActivo": {
+                    "type": "boolean"
+                },
+                "Id": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "Nombre": {
+                    "type": "string"
+                },
+                "NumeroCuenta": {
+                    "type": "string"
+                },
+                "Saldo": {
+                    "type": "number",
+                    "format": "double"
+                },
+                "Sucursal": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "TipoCuenta": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "TipoRecurso": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "UnidadEjecutora": {
+                    "type": "integer",
+                    "format": "int64"
+                }
+            }
+        },
+        "FormaIngreso": {
+            "title": "FormaIngreso",
+            "type": "object",
+            "properties": {
+                "Descripcion": {
+                    "type": "string"
+                },
+                "Id": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "Nombre": {
+                    "type": "string"
+                }
+            }
+        },
+        "InformacionPersonaNatural": {
+            "title": "InformacionPersonaNatural",
+            "type": "object",
+            "properties": {
+                "Id": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "Id_RENAME": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "PrimerApellido": {
+                    "type": "string"
+                },
+                "PrimerNombre": {
+                    "type": "string"
+                },
+                "SegundoApellido": {
+                    "type": "string"
+                },
+                "SegundoNombre": {
+                    "type": "string"
+                },
+                "TipoDocumento": {
+                    "type": "number",
+                    "format": "double"
+                }
+            }
+        },
+        "Ingreso": {
+            "title": "Ingreso",
+            "type": "object",
+            "properties": {
+                "Concepto": {
+                    "$ref": "#/definitions/Concepto"
+                },
+                "Consecutivo": {
+                    "type": "number",
+                    "format": "double"
+                },
+                "CuentaBancaria": {
+                    "$ref": "#/definitions/CuentaBancaria"
+                },
+                "EstadoActa": {
+                    "type": "string"
+                },
+                "FechaConsignacion": {
+                    "$ref": "#/definitions/\u0026{time Time}"
+                },
+                "FechaIngreso": {
+                    "$ref": "#/definitions/\u0026{time Time}"
+                },
+                "FormaIngreso": {
+                    "$ref": "#/definitions/FormaIngreso"
+                },
+                "Id": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "InformacionPersonaNatural": {
+                    "$ref": "#/definitions/InformacionPersonaNatural"
+                },
+                "Observaciones": {
+                    "type": "string"
+                },
+                "OrigenIngreso": {
+                    "type": "string"
+                },
+                "QuienElaboro": {
+                    "type": "string"
+                },
+                "QuienReviso": {
+                    "type": "string"
+                },
+                "Valor": {
+                    "type": "number",
+                    "format": "double"
+                },
+                "Vigencia": {
+                    "type": "number",
+                    "format": "double"
+                }
+            }
+        },
+        "IngresoRubro": {
+            "title": "IngresoRubro",
+            "type": "object",
+            "properties": {
+                "Id": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "Ingreso": {
+                    "$ref": "#/definitions/Ingreso"
+                },
+                "Rubro": {
+                    "$ref": "#/definitions/Rubro"
+                }
+            }
+        },
+        "Rubro": {
+            "title": "Rubro",
+            "type": "object",
+            "properties": {
+                "Administracion": {
+                    "type": "string"
+                },
+                "Codigo": {
+                    "type": "string"
+                },
+                "Descripcion": {
+                    "type": "string"
+                },
+                "Estado": {
+                    "$ref": "#/definitions/int16"
+                },
+                "Id": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "TipoPlan": {
+                    "$ref": "#/definitions/int16"
+                },
+                "Vigencia": {
+                    "type": "number",
+                    "format": "double"
+                }
+            }
+        },
+        "int16": {
+            "type": "object"
+        }
+    },
+    "tags": [
+        {
+            "name": "concepto",
+            "description": "ConceptoController oprations for Concepto\n"
+        },
+        {
+            "name": "cuenta_bancaria",
+            "description": "CuentaBancariaController oprations for CuentaBancaria\n"
+        },
+        {
+            "name": "rubro",
+            "description": "RubroController oprations for Rubro\n"
+        },
+        {
+            "name": "informacion_persona_natural",
+            "description": "InformacionPersonaNaturalController oprations for InformacionPersonaNatural\n"
+        },
+        {
+            "name": "ingreso",
+            "description": "IngresoController oprations for Ingreso\n"
+        },
+        {
+            "name": "forma_ingreso",
+            "description": "FormaIngresoController oprations for FormaIngreso\n"
+        },
+        {
+            "name": "ingreso_rubro",
+            "description": "IngresoRubroController oprations for IngresoRubro\n"
+        }
+    ]
+}
